@@ -1,0 +1,122 @@
+.lt_container .lt_content {
+    padding: 45px 0 85px 0;
+}
+.mui-slider-handle .lt_cartBox {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.mui-slider-handle .lt_cartBox img {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
+.mui-slider-handle .lt_cartBox div {
+    overflow: hidden;
+}
+.lt_cartBox .title {
+    color: #666;
+}
+.lt_cartBox .price .newPrice {
+    color: #ff3300;
+}
+.lt_cartBox .price .oldPrice {
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: line-through;
+}
+.lt_cartBox .price .num {
+    font-size: 12px;
+    color: #8f8f94;
+    float: right;
+    margin-right: 10px;
+}
+.lt_cartBox .size {
+    font-size: 12px;
+    color: #8f8f94;
+}
+.lt_cartBox input {
+    position: absolute;
+    left: 10px;
+    top: 73px;
+    width: 12px;
+    height: 12px;
+    -webkit-appearance: checkbox;
+}
+.mui-icon-arrowright {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translate(0,-50%);
+    font-size: 18px;
+    color: #bbb;
+}
+.productSize {
+    padding: 10px 5px 0;
+    color: #000;
+    font-size: 14px;
+    text-align: left;
+}
+.productSize span {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+.productSize span.active {
+    background-color: #fa672d;
+}
+.productCount {
+    padding: 10px 5px;
+    color: #000;
+    font-size: 14px;
+    text-align: left;
+}
+.productCount span {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+
+}
+.productCount input {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+    padding: 0;
+    margin: 0;
+    border-radius: unset;
+    border-left: none;
+    border-right: none;
+}
+
+/*订单价格区*/
+.lt_container .lt_priceAll {
+    width: 100%;
+    height: 30px;
+    border-top: 1px solid #ccc;
+    position: fixed;
+    left: 0;
+    bottom: 55px;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #ff3300;
+    font-weight: 600;
+    line-height: 29px;
+}
+.lt_container .lt_priceAll a {
+    float: right;
+    width: 100px;
+    height: 100%;
+    background-color: #ff3300;
+    color: #fff;
+    text-align: center;
+}

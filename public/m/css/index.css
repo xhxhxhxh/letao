@@ -1,0 +1,85 @@
+/*导航区*/
+.lt_content .lt_nav {
+    padding: 10px;
+}
+.lt_nav li {
+    width: 33.33%;
+    float: left;
+}
+.lt_nav li img {
+    width: 100%;
+}
+
+/*热门推荐区*/
+.lt_content .lt_hot {
+    padding: 0 10px 10px;
+    border-top: 1px solid #ccc;
+}
+.lt_hot li {
+    width: 33.33%;
+    float: left;
+}
+.lt_hot li:nth-of-type(3) {
+    float: right;
+    width: 32.69%;
+}
+.lt_hot li img {
+    width: 100%;
+}
+
+/*品牌专区*/
+.lt_content .lt_brand {
+    width: 100%;
+    padding: 0 10px;
+}
+.lt_brand .title img{
+    width: 100%;
+}
+.lt_brand .list {
+    padding: 10px 0;
+}
+.lt_brand .list li{
+    float: left;
+    width: 25%;
+}
+.lt_brand .list li img {
+    width: 100%;
+}
+
+/*运动专区*/
+.lt_content .lt_sports {
+    width: 100%;
+    padding: 10px;
+}
+.lt_sports li {
+    width: 48%;
+    float: left;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.lt_sports li:nth-of-type(2n) {
+    float: right;
+}
+.lt_sports li img {
+    width: 100%;
+}
+.lt_sports li p {
+    text-align: center;
+    padding: 0 5px;
+}
+.lt_sports li p:last-of-type {
+    font-size: 12px;
+}
+.lt_sports li p:last-of-type .newPrice {
+    color: #f30;
+    margin-right: 10px;
+}
+.lt_sports li p:last-of-type .oldPrice {
+    text-decoration: line-through;
+}
+.lt_sports li button {
+    background-color: #006699;
+    color: #fff;
+}

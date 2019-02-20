@@ -1,0 +1,91 @@
+.lt_content .lt_search {
+    width: 100%;
+    padding: 10px 70px 10px 10px;
+    position: relative;
+}
+.lt_search input {
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #006699;
+    padding-left: 10px;
+    font-size: 12px;
+    text-align: left;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0;
+}
+.lt_search  a {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: #006699;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/*搜索内容区域*/
+.lt_content .lt_filter {
+    width: 100%;
+    height: 30px;
+    background-color: #efeff4;
+    text-align: center;
+    line-height: 30px;
+}
+.lt_content .lt_filter a {
+    float: left;
+    width: 25%;
+    color: #333;
+    font-size: 12px;
+}
+.lt_content .lt_filter a.active {
+    color: #f10215;
+}
+
+/*产品展示区*/
+.lt_content .lt_sports {
+    width: 100%;
+    padding: 10px;
+}
+.lt_sports li {
+    width: 48%;
+    float: left;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.lt_sports li a {
+    display: block;
+    height: 100%;
+}
+.lt_sports li:nth-of-type(2n) {
+    float: right;
+}
+.lt_sports li img {
+    width: 100%;
+}
+.lt_sports li p {
+    text-align: center;
+    padding: 0 5px;
+}
+.lt_sports li p:last-of-type {
+    font-size: 12px;
+}
+.lt_sports li p:last-of-type .newPrice {
+    color: #f30;
+    margin-right: 10px;
+}
+.lt_sports li p:last-of-type .oldPrice {
+    text-decoration: line-through;
+}
+.lt_sports li button {
+    background-color: #006699;
+    color: #fff;
+}

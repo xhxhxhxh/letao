@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="description" content="乐淘是中国最大的正品运动鞋、皮鞋网上专卖。乐淘网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
+    <meta name="Keywords" content="乐淘 乐淘鞋城 买鞋子 上乐淘 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
+    <title>搜索</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="res/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="res/mui/css/mui.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+<div class="lt_container">
+    <!--顶部搜索区-->
+    <header class="lt_topBar">
+        <a href="javascript:history.back();" class="lt_back"><span class="fa fa-arrow-left"></span></a>
+        <h3>搜索</h3>
+    </header>
+
+    <!--主体内容区-->
+    <main class="lt_content">
+        <div class="lt_scroll">
+            <form action="#" class="lt_search">
+                <input type="search" name="search" id="search" placeholder="搜索您喜欢的商品">
+                <a href="javascript:;">搜索</a>
+            </form>
+            <div class="searchBar mui-clearfix"><span>搜索历史</span><span class="fa fa-trash allHistory_del"> 清空记录</span></div>
+            <div class="searchHistory">
+                <ul class="mui-clearfix">
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!--底部分类区-->
+    <footer class="lt_bottomBar">
+        <ul class="mui-clearfix">
+            <li><a href="index.html"><span class="fa fa-home"></span><p>首页</p></a></li>
+            <li><a href="cate.html"><span class="fa fa-bars"></span><p>分类</p></a></li>
+            <li><a href="cart.html"><span class="fa fa-shopping-cart"></span><p>购物车</p></a></li>
+            <li><a href="user/index.html"><span class="fa fa-user"></span><p>会员中心</p></a></li>
+        </ul>
+    </footer>
+</div>
+
+<script type="text/x-art-template" id="tmpl">
+    <%for(var i=0;i< list.length ;i++){%>
+        <li data-id="<%=i%>" data-key="<%=list[i]%>"><%=list[i]%><span class="fa fa-close history_del"></span></li>
+    <%}%>
+</script>
+<script src="res/zepto/zepto.min.js"></script>
+<script src="res/mui/js/mui.js"></script>
+<script src="res/artTemplate/template-web.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

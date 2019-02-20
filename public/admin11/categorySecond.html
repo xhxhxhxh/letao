@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>后台管理系统-首页</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/nprogress/nprogress.css"/>
+    <link rel="stylesheet" href="assets/bootstrap-validator/css/bootstrapValidator.min.css"/>
+    <link rel="stylesheet" href="css/admin.css"/>
+    <style>
+        #image {
+            display: block;
+            width: 82px;
+            height: 33px;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<!--侧边栏-->
+<aside class="ad_aside">
+    <!--商标-->
+    <div class="brand"><a href="index.html">ITCAST</a></div>
+    <!--用户-->
+    <div class="user">
+        <img src="images/default.png" alt=""/>
+        <span>超级管理员</span>
+    </div>
+    <!--菜单-->
+    <div class="menu">
+        <ul>
+            <li><a href="userManage.html"><span class="glyphicon glyphicon-user"></span> 用户管理</a></li>
+            <li>
+                <a href="javascript:;"><span class="glyphicon glyphicon-list"></span> 分类管理</a>
+                <div class="child" style="display: none">
+                    <a href="categoryFirst.html">一级分类</a>
+                    <a href="categorySecond.html">二级分类</a>
+                </div>
+            </li>
+            <li><a href="productManage.html"><span class="glyphicon glyphicon-tags"></span> 商品管理</a></li>
+        </ul>
+    </div>
+</aside>
+<!--内容-->
+<section class="ad_section">
+    <!--顶部导航-->
+    <nav class="ad_nav">
+        <a data-menu href="javascript:;"><span class="glyphicon glyphicon-align-justify"></span></a>
+        <a data-logout href="javascript:;"><span class="glyphicon glyphicon-log-out"></span></a>
+    </nav>
+    <div class="container-fluid">
+        <!--路径导航-->
+        <ol class="breadcrumb">
+            <li><a href="#">管理系统</a></li>
+            <li class="active">首页</li>
+        </ol>
+        <div class="ad_content">
+            <button class="btn btn-default mb_15" data-toggle="modal" data-target="#addCate">添加分类</button>
+            <table class="table table-bordered">
+
+            </table>
+            <!--分页-->
+            <nav class="text-right">
+                <ul class="pagination" id="pagination">
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+<!--添加分类-->
+<div class="modal fade" id="addCate">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                <h4 class="modal-title">添加分类</h4>
+            </div>
+            <div class="modal-body">
+                <form id="addCategory" action="#">
+                    <div class="form-group">
+                        <div class="dropdown">
+                            <span>一级分类：</span>
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                <span class="chosen">请选择</span>
+                                <span class="caret"></span>
+                            </button>
+                            <input type="hidden" name="categoryId" class="form-control">
+                            <input type="hidden" name="hot" class="form-control" value="1">
+                            <ul class="dropdown-menu">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group"> <input type="text" placeholder="请输入二级分类名称" class="form-control" name="brandName"></div>
+                    <div class="form-group">
+                        <div style="margin-top:15px;position: relative">
+                            <button class="btn btn-default">上传图片</button>
+                            <input type="file" name="pic1" id="image">
+                            <input type="hidden" name="brandLogo" class="form-control">
+                            <div style="margin-top:15px"><img src="images/none.png" alt="" width="100" height="100" id="uploadImage"></div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary" form="addCategory">确定</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/x-art-template" id="cateData">
+    <thead>
+    <tr>
+        <th>序号</th>
+        <th>一级分类名称</th>
+        <th>二级分类名称</th>
+        <th>二级分类LOGO</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%for(var i=0;i < rows.length;i++){%>
+    <tr>
+        <th scope="row"><%=(page-1)*size+i+1%></th>
+        <td><%=rows[i].categoryName%></td>
+        <td><%=rows[i].brandName%></td>
+        <td><img src="<%=rows[i].brandLogo%>" alt="" width="40" height="40"></td>
+    </tr>
+    <%}%>
+    </tbody>
+</script>
+<!--一级分类目录渲染-->
+<script type="text/x-art-template" id="firstCate">
+    <%for(var i=0;i < rows.length;i++){%>
+    <li data-id="<%=rows[i].id%>"><a href="#"><%=rows[i].categoryName%></a></li>
+    <%}%>
+</script>
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/nprogress/nprogress.js"></script>
+<script src="assets/artTemplate/template-web.js"></script>
+<script src="assets/bootstrap-paginator/bootstrap-paginator.js"></script>
+<script src="assets/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="assets/jquery-fileupload/jquery.fileupload.js"></script>
+<script src="assets/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/categorySecond.js"></script>
+</body>
+</html>

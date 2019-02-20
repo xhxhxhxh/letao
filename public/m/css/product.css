@@ -1,0 +1,125 @@
+.lt_content .title {
+    padding: 15px 5px;
+}
+.lt_content .title p {
+    color: #000;
+    font-size: 18px;
+    margin: 0;
+}
+.lt_content .price {
+    padding: 10px 5px;
+    color: #000;
+    font-size: 14px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+.lt_content .price .newPrice {
+    color: #ea543d;
+    font-size: 24px;
+    font-weight: bold;
+}
+.lt_content .price .oldPrice {
+    color: #afafaf;
+    font-size: 14px;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+.lt_content .size {
+    padding: 10px 5px 0;
+    color: #000;
+    font-size: 14px;
+}
+.lt_content .size span {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+.lt_content .size span.active {
+    background-color: #fa672d;
+}
+.lt_content .count {
+    padding: 10px 5px;
+    color: #000;
+    font-size: 14px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+.lt_content .count span {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+
+}
+.lt_content .count input {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    text-align: center;
+    line-height: 26px;
+    padding: 0;
+    margin: 0;
+    border-radius: unset;
+    border-left: none;
+    border-right: none;
+}
+.lt_loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*transform: translate(-50%,-50%);*/
+    margin-top: -12px;
+    margin-left: -12px;
+    animation: loading 1s infinite linear;
+    color: #006699;
+}
+.mui-scroll {
+    min-height: 100%;
+}
+@keyframes loading {
+    0% {
+
+    }
+   100% {
+        transform: rotate(360deg);
+    }
+}
+/*底部购物栏*/
+.lt_cart {
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px 10px 10px 62px;
+    background-color: #e6e6e6;
+    border-top: 1px solid #ccc;
+}
+.lt_cart span {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 20px;
+}
+.lt_cart .lt_cartAdd, .lt_cart .lt_buyNow {
+    display: inline-block;
+    width: 48%;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.lt_cart .lt_cartAdd {
+    background-color: #991020;
+}
+.lt_cart .lt_buyNow {
+    background-color: #fa672d;
+}

@@ -1,0 +1,67 @@
+/*reset*/
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    tap-highlight-color:transparent;
+    -webkit-tap-highlight-color:transparent;
+}
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei",Sans-Serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+input, textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    -webkit-appearance:none;
+}
+img {
+    vertical-align: bottom;
+}
+
+/*common css*/
+
+.f_left {
+    float: left;
+}
+.f_right {
+    float: right;
+}
+.clearFix::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+    clear: both;
+}
+.m_l10 {
+    margin-left: 10px;
+}
+.m_r10 {
+    margin-right: 10px;
+}
+.m_t10 {
+    margin-top: 10px;
+}
+.m_b10 {
+    margin-bottom: 10px;
+}
+/*精灵图公共样式*/
+[class*= icon_], [calss^=icon_] {
+    background-image: url("../images/sprites.png");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+}
